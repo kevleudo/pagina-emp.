@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+
+
+}
+
+header {
+
+    .menus {
+        color: white;
+        padding-right: 10px;
+        font-size: 16px;
+
+
+
+    }
+
+    .menus:hover {
+        color: blue;
+    }
+
+    @media(max-width: 500px) {
+        header {
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+
+
+    }
+
+
+
+}
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: url(img/inicio.png);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.icono-menu {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+  
+}
+
+.icono-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    
+
+}
+
+.menu-deco {
+    list-style: none;
+
+
+
+}
+
+.enlaces-menu {
+    list-style: none;
+    color: rgb(60, 102, 132);
+    text-decoration: none;
+   
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    justify-content: center;
+    color: black;
+    background-color: #c5d2e0;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+
+        font-size: 14px;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+
+        font-size: 16px;
+
+    }
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+h4 {
+    padding: 10px;
+}
+
+section {
+    margin: 20px;
+}
+
+.simbolos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-enlaces {
+    list-style-type: circle;
+  
+
+}
+
+.img-inicio {
+    background-image: url(img/inicio.pg);
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+a{
+   color: white;
+   text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+.link-titulo, .uno{
+    color: rgb(50, 23, 158);
+}
