@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Red Comunitaria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="klt.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Header para volver a la pagina de emprendimiento -->
+    <header class="header">
+        <div class="barra-de-navegacion">
+            <nav>
+                <a href="index.html" class="menus">Inicio</a>
+            </nav>
+        </div>
+    </header> <!-- El header lo envolvi con la etiqueta <header> para una mejor semántica -->
+
+    <main> <!-- El contenido principal de la página lo envolvi con la etiqueta <main> -->
+        <h1>Red Comunitaria - Dashboard</h1>
+
+        <input type="file" id="csvFile" accept=".csv"><br><br>
+
+        <div id="filters">
+            <label>Año:</label>
+            <input type="number" id="anio">
+            <label>Tipo:</label>
+            <input type="text" id="tipo">
+            <label>País:</label>
+            <input type="text" id="pais">
+            <label>Género:</label>
+            <input type="text" id="genero">
+            <button class="btn" onclick="filtrarDatos()">Filtrar</button>
+            <button class="btn" onclick="limpiarFiltros()">Limpiar Filtros</button>
+        </div>
+
+        <br>
+        <table id="csvTable"></table>
+
+        <canvas id="barrasFemenino"></canvas>
+        <canvas id="tortaTipos"></canvas>
+        <canvas id="lineasInnovacion"></canvas>
+        <canvas id="areaComparativa"></canvas>
+    </main>
+    <footer>
+        <p>© 2023 KLT. Todos los derechos reservados.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
