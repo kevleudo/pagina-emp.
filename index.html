@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?</title>
+    <title>Emprendimiento</title>
     <link rel="stylesheet" href="klt.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -167,7 +168,7 @@
     <section id="Enlaces y recursos" class="Enlaces-y-recursos">
         <h2>Enlaces y recursos</h2>
         <ul class="lista-enlaces">
-            <li class="lista-enlaces" id="Emprendimiento Aura Glam"> <a href="" target="_blank"
+            <li class="lista-enlaces" id="Emprendimiento Aura Glam"> <a href="https://kevleudo.github.io/aura-glamur/" target="_blank"
                     class="uno">Emprendimmiento Aura
                     Glam</a></li>
             <h4 id="Organizaciones que apoyan el emprendimiento">Organizaciones que apoyan el emprendimiento</h4>
@@ -209,6 +210,166 @@
 
     <section id="Graficas de interes" class="graficas-de-interes">
         <h2>Graficas</h2>
+         <title>Evolución de la Inversión en Startups</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="linea" width="400" height="200"></canvas>
+  <script>
+    var ctx = document.getElementById('linea').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2021', '2022', '2023', '2024'],
+        datasets: [{
+          label: 'Inversión en millones de USD',
+          data: [376, 400, 450, 513],
+          fill: false,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          tension: 0.1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script> <br><br><br><br>
+
+  <title>Distribución de Startups por Sector</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="pastel" width="400" height="400"></canvas>
+  <script>
+    var ctx = document.getElementById('pastel').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['FinTech', 'SaaS', 'HealthTech', 'EdTech', 'PropTech'],
+        datasets: [{
+          label: 'Porcentaje de Startups',
+          data: [17, 10, 8, 6, 6],
+          backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FF8C33'],
+          borderColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script> <br><br><br><br>
+
+
+<title>Distribución de Startups por Región</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="barras" width="400" height="200"></canvas>
+  <script>
+    var ctx = document.getElementById('barras').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Bogotá', 'Antioquia', 'Valle del Cauca', 'Santander', 'Caldas'],
+        datasets: [{
+          label: 'Número de Startups',
+          data: [795, 285, 104, 50, 45],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script> <br><br><br><br>
+
+     <title>Gráfica de Área Local - Colombia</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    canvas {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Gráfica de Área: Población en Regiones de Colombia</h2>
+  <canvas id="areaChart" width="600" height="400"></canvas>
+
+  <script>
+    const ctx = document.getElementById('areaChart').getContext('2d');
+
+    const data = {
+      labels: ['Bogotá', 'Antioquia', 'Valle del Cauca', 'Atlántico', 'Santander', 'Cundinamarca'],
+      datasets: [{
+        label: 'Población estimada (millones)',
+        data: [8.1, 6.5, 4.2, 2.5, 2.2, 2.5],
+        fill: true,
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        tension: 0.4
+      }]
+    };
+
+    const config = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Distribución de población por área local',
+            font: {
+              size: 18
+            }
+          },
+          legend: {
+            display: true,
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Millones de Habitantes'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Regiones de Colombia'
+            }
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, config);
+  </script>
+
+
+  
 
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Sed eligendi deserunt natus nam nulla quod quidem numquam minima
@@ -219,6 +380,130 @@
 
     <section id="Test de emprendimiento" class="test-de-emprendimiento">
         <h2>Test de emprendimiento</h2>
+
+         <title>Cuestionario Emprendimiento Colombia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .question input {
+      margin-right: 10px;
+    }
+    #result {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #dff0d8;
+      color: #3c763d;
+      font-weight: bold;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>¿Estás listo para emprender en Colombia?</h2>
+    <form id="quizForm">
+      <div class="question">
+        <label>1. ¿Tienes una idea clara de negocio?</label>
+        <input type="radio" name="q1" value="2">Sí
+        <input type="radio" name="q1" value="0">No
+      </div>
+      <div class="question">
+        <label>2. ¿Conoces el mercado colombiano?</label>
+        <input type="radio" name="q2" value="2">Sí
+        <input type="radio" name="q2" value="0">No
+      </div>
+      <div class="question">
+        <label>3. ¿Tienes un plan financiero?</label>
+        <input type="radio" name="q3" value="2">Sí
+        <input type="radio" name="q3" value="1">Más o menos
+        <input type="radio" name="q3" value="0">No
+      </div>
+      <div class="question">
+        <label>4. ¿Estás dispuesto/a a asumir riesgos?</label>
+        <input type="radio" name="q4" value="2">Sí
+        <input type="radio" name="q4" value="1">A veces
+        <input type="radio" name="q4" value="0">No
+      </div>
+      <div class="question">
+        <label>5. ¿Cuentas con recursos o capital inicial?</label>
+        <input type="radio" name="q5" value="2">Sí
+        <input type="radio" name="q5" value="1">Algo
+        <input type="radio" name="q5" value="0">No
+      </div>
+      <div class="question">
+        <label>6. ¿Tienes habilidades en marketing o ventas?</label>
+        <input type="radio" name="q6" value="2">Sí
+        <input type="radio" name="q6" value="1">Un poco
+        <input type="radio" name="q6" value="0">No
+      </div>
+
+      <button type="button" onclick="calcularResultado()">Ver resultado</button>
+    </form>
+
+    <div id="result" style="display: none;"></div>
+  </div>
+
+  <script>
+    function calcularResultado() {
+      const form = document.getElementById('quizForm');
+      const formData = new FormData(form);
+      let score = 0;
+
+      for (let [key, value] of formData.entries()) {
+        score += parseInt(value);
+      }
+
+      let resultText = '';
+      if (score >= 10) {
+        resultText = "¡Excelente! Tienes un perfil ideal para emprender en Colombia. Estás bien preparado/a para iniciar tu negocio.";
+      } else if (score >= 6) {
+        resultText = "Tienes un buen punto de partida, pero deberías fortalecer algunas áreas antes de emprender, como el plan financiero o el conocimiento del mercado.";
+      } else {
+        resultText = "Aún no estás listo/a para emprender. Te recomendamos formarte más en áreas clave y evaluar bien tu idea antes de comenzar.";
+      }
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.textContent = resultText;
+      resultDiv.style.display = 'block';
+    }
+  </script>
+
+        
 
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Sed eligendi deserunt natus nam nulla quod quidem numquam minima
